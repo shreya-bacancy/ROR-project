@@ -1,0 +1,17 @@
+<p>
+  <strong>Title:</strong>
+  <%= @book.title %>
+</p>
+
+<p>
+  <strong>Text:</strong>
+  <%= @book.text %>
+</p>
+
+<h2>Comments</h2>
+<%= render @book.comments %>
+
+<h2> Add a Comment </h2>
+<%= render 'comments/form' %>
+
+<%= link_to 'back' ,book_index_path %>
