@@ -1,0 +1,9 @@
+<ul>
+  <% @books.each do |article| %>
+    <li>
+      <h3>
+        <%= link_to article.title%>
+      </h3>
+    </li>
+  <% end %>
+</ul>

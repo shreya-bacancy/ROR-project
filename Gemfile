@@ -8,6 +8,8 @@ gem 'rails', '~> 6.0.3', '>= 6.0.3.3'
 # Use sqlite3 as the database for Active Record
 #gem 'sqlite3', '~> 1.4'
 gem 'pg'
+gem 'pry-rails'
+gem "rails_best_practices"
 # Use Puma as the app server
 gem 'puma', '~> 4.1'
 # Use SCSS for stylesheets
@@ -18,6 +20,15 @@ gem 'webpacker', '~> 4.0'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.7'
+gem 'elasticsearch-model', '~> 6'
+gem 'elasticsearch-rails','~> 6'
+gem 'devise', :git => "https://github.com/heartcombo/devise.git", ref: '8bb358cf80a632d3232c3f548ce7b95fd94b6eb2'
+gem 'google-api-client', require: 'google/apis/calendar_v3'
+gem 'omniauth-google-oauth2'
+gem 'gemoji'
+gem 'dotenv-rails'
+
+gem "omniauth", "~> 1.9.1"
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use Active Model has_secure_password

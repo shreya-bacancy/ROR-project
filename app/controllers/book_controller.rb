@@ -1,11 +1,11 @@
 class BookController < ApplicationController
-	http_basic_authenticate_with name: "shreya", password: "secret",
-	except: [:index,:show]
+	# http_basic_authenticate_with name: "shreya", password: "secret",
+	# except: [:index,:show]
 	def index
 		@books = Book.all
 	end
 
-	def edit
+	def show
 		@book = Book.find(params[:id])
 	end
 
@@ -13,13 +13,8 @@ class BookController < ApplicationController
 		@book = Book.new
 	end
 
-	def update
+	def edit
 		@book = Book.find(params[:id])
-		if @book.update(book_params)
-			redirect_to @book
-		else
-			render 'edit'
-		end
 	end
 
 	def create
@@ -30,9 +25,13 @@ class BookController < ApplicationController
 			render 'new'
 		 end
 	end
-
-	def show
+	def update
 		@book = Book.find(params[:id])
+		if @book.update(book_params)
+			redirect_to @book
+		else
+			render 'edit'
+		end
 	end
 
 	def destroy

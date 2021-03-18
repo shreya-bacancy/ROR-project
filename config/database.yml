@@ -23,7 +23,7 @@ test:
    adapter: postgresql
    encoding: unicode
    host: localhost
-   database: library_development
+   database: library_test
    username: rubyuser
    password: 1234
  
@@ -31,5 +31,5 @@ production:
    adapter: postgresql
    host: localhost
    encoding: unicode
-   database: library_developmenta
+   database: library_development
    username: 1234

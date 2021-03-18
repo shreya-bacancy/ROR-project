@@ -1,16 +1,18 @@
-<%= form_with scope: :book, url: book_index_path,  local: true do |form| %>
-<% if @book.errors.any? %>
-	<div id="error_explanation">
-		<h2>
-			<%= pluralize(@book.errors.count,"error") %> prohibited from saving
-		</h2>
-		<ul>
-			<% @book.errors.full_messages.each do |msg| %>
-			<li><%= msg %></li>
-			<% end %>
-		</ul>
-	</div>
-<% end %>
+<%= form_with scope: :book ,url: book_index_path, local: true do |form| %>
+
+  <% if @book.errors.any? %>
+    <div id="error_explanation">
+      <h2>
+        <%= pluralize(@book.errors.count, "error") %> prohibited
+        this book from being saved:
+      </h2>
+      <ul>
+        <% @book.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
 
   <p>
     <%= form.label :title %><br>
@@ -25,6 +27,5 @@
   <p>
     <%= form.submit %>
   </p>
-<% end %>
-
+  <% end %>
 <%= link_to 'Back', book_index_path %>
